@@ -1,0 +1,894 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.0.4 (Python 3.7.0 on win32)" generated="20181003 00:25:46.315">
+<suite id="s1" name="InvalidCityTest &amp; ValidCityTest &amp; WeatherInvalidLogin">
+<suite id="s1-s1" name="InvalidCityTest" source="C:\Users\Anurag\dwhelper\weather_robot_framework_demo\tests\InvalidCityTest.robot">
+<test id="s1-s1-t1" name="Should see correct error messages with invalid city name">
+<kw name="Begin Web Test" library="Common" type="setup">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to the given ``url``.</doc>
+<arguments>
+<arg>about:blank</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20181003 00:25:47.105" level="INFO">Opening browser 'chrome' to base url 'about:blank'.</msg>
+<status status="PASS" starttime="20181003 00:25:47.100" endtime="20181003 00:25:53.735"></status>
+</kw>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20181003 00:25:53.736" endtime="20181003 00:25:54.899"></status>
+</kw>
+<kw name="Delete All Cookies" library="Selenium2Library">
+<doc>Deletes all cookies.</doc>
+<status status="PASS" starttime="20181003 00:25:54.899" endtime="20181003 00:25:54.919"></status>
+</kw>
+<status status="PASS" starttime="20181003 00:25:47.100" endtime="20181003 00:25:54.919"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${HOME_BASE_URL.${ENVIRONMENT}}</arg>
+</arguments>
+<status status="PASS" starttime="20181003 00:25:54.924" endtime="20181003 00:25:54.924"></status>
+</kw>
+<kw name="Get CSV Data" library="DataManager">
+<arguments>
+<arg>${INVALID_CITY_PATH_CSV}</arg>
+</arguments>
+<assign>
+<var>${InvalidLoginScenarios}</var>
+</assign>
+<kw name="Read Csv File" library="Csv">
+<arguments>
+<arg>${FilePath}</arg>
+</arguments>
+<assign>
+<var>${Data}</var>
+</assign>
+<msg timestamp="20181003 00:25:54.929" level="INFO">${Data} = [['Newbomabai', 'IN', 'Not found']]</msg>
+<status status="PASS" starttime="20181003 00:25:54.929" endtime="20181003 00:25:54.929"></status>
+</kw>
+<msg timestamp="20181003 00:25:54.934" level="INFO">${InvalidLoginScenarios} = [['Newbomabai', 'IN', 'Not found']]</msg>
+<status status="PASS" starttime="20181003 00:25:54.929" endtime="20181003 00:25:54.934"></status>
+</kw>
+<kw name="Login with Many Invalid Credentials" library="InvalidCitySearch">
+<arguments>
+<arg>${InvalidLoginScenarios}</arg>
+</arguments>
+<kw name="${LocationScenario} IN [ @{InvalidLocationScenarios} ]" type="for">
+<kw name="${LocationScenario} = ['Newbomabai', 'IN', 'Not found']" type="foritem">
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<arguments>
+<arg>InValidSearch.Navigate To</arg>
+</arguments>
+<kw name="Navigate To" library="InValidSearch">
+<kw name="Go To" library="Selenium2Library">
+<doc>Navigates the active browser instance to the provided ``url``.</doc>
+<arguments>
+<arg>${BASE_URL.${ENVIRONMENT}}</arg>
+</arguments>
+<msg timestamp="20181003 00:25:54.939" level="INFO">Opening url 'https://openweathermap.org/'</msg>
+<status status="PASS" starttime="20181003 00:25:54.939" endtime="20181003 00:26:01.611"></status>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="Selenium2Library">
+<doc>Waits until element ``locator`` is enabled.</doc>
+<arguments>
+<arg>xpath=//input[@placeholder='Your city name']</arg>
+</arguments>
+<status status="PASS" starttime="20181003 00:26:01.612" endtime="20181003 00:26:01.801"></status>
+</kw>
+<status status="PASS" starttime="20181003 00:25:54.939" endtime="20181003 00:26:01.802"></status>
+</kw>
+<status status="PASS" starttime="20181003 00:25:54.939" endtime="20181003 00:26:01.802"></status>
+</kw>
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<arguments>
+<arg>Attempt Login</arg>
+<arg>${LocationScenario}</arg>
+</arguments>
+<kw name="Attempt Login" library="InvalidCitySearch">
+<arguments>
+<arg>${LocationScenario}</arg>
+</arguments>
+<kw name="Enter Location" library="InValidSearch">
+<arguments>
+<arg>${LocationDetails}</arg>
+</arguments>
+<kw name="Catenate" library="BuiltIn">
+<doc>Catenates the given items together and returns the resulted string.</doc>
+<arguments>
+<arg>SEPARATOR=,</arg>
+<arg>${LocationDetails[0]}</arg>
+<arg>${LocationDetails[1]}</arg>
+</arguments>
+<assign>
+<var>${Location}</var>
+</assign>
+<msg timestamp="20181003 00:26:01.807" level="INFO">${Location} = Newbomabai,IN</msg>
+<status status="PASS" starttime="20181003 00:26:01.805" endtime="20181003 00:26:01.807"></status>
+</kw>
+<kw name="Run Keyword Unless" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is false.</doc>
+<arguments>
+<arg>'${LocationDetails[0]}' == '#BLANK'</arg>
+<arg>Input Text</arg>
+<arg>${YOUR_CITY_NAME}</arg>
+<arg>${Location}</arg>
+</arguments>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${YOUR_CITY_NAME}</arg>
+<arg>${Location}</arg>
+</arguments>
+<msg timestamp="20181003 00:26:01.809" level="INFO">Typing text 'Newbomabai,IN' into text field 'xpath=//input[@placeholder='Your city name']'.</msg>
+<status status="PASS" starttime="20181003 00:26:01.808" endtime="20181003 00:26:02.488"></status>
+</kw>
+<status status="PASS" starttime="20181003 00:26:01.807" endtime="20181003 00:26:02.488"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>5s</arg>
+</arguments>
+<msg timestamp="20181003 00:26:07.492" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20181003 00:26:02.489" endtime="20181003 00:26:07.492"></status>
+</kw>
+<status status="PASS" starttime="20181003 00:26:01.804" endtime="20181003 00:26:07.492"></status>
+</kw>
+<kw name="Click Submit" library="InValidSearch">
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks button identified by ``locator``.</doc>
+<arguments>
+<arg>${SERACH_BUTTON}</arg>
+</arguments>
+<msg timestamp="20181003 00:26:07.492" level="INFO">Clicking button 'xpath=(//BUTTON[@type='submit'])[2]'.</msg>
+<status status="PASS" starttime="20181003 00:26:07.492" endtime="20181003 00:26:13.765"></status>
+</kw>
+<status status="PASS" starttime="20181003 00:26:07.492" endtime="20181003 00:26:13.766"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>1s</arg>
+</arguments>
+<msg timestamp="20181003 00:26:14.767" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20181003 00:26:13.766" endtime="20181003 00:26:14.767"></status>
+</kw>
+<status status="PASS" starttime="20181003 00:26:01.803" endtime="20181003 00:26:14.768"></status>
+</kw>
+<status status="PASS" starttime="20181003 00:26:01.802" endtime="20181003 00:26:14.768"></status>
+</kw>
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<arguments>
+<arg>Verify Login Page Error Message</arg>
+<arg>${LocationScenario}</arg>
+</arguments>
+<kw name="Verify Login Page Error Message" library="InvalidCitySearch">
+<arguments>
+<arg>${LocationScenario}</arg>
+</arguments>
+<kw name="Verify Error Message" library="InValidSearch">
+<arguments>
+<arg>${ExpectedErrorMessage}</arg>
+</arguments>
+<kw name="Page Should Contain" library="Selenium2Library">
+<doc>Verifies that current page contains ``text``.</doc>
+<arguments>
+<arg>${ExpectedErrorMessage[2]}</arg>
+</arguments>
+<msg timestamp="20181003 00:26:14.847" level="INFO">Current page contains text 'Not found'.</msg>
+<status status="PASS" starttime="20181003 00:26:14.773" endtime="20181003 00:26:14.847"></status>
+</kw>
+<status status="PASS" starttime="20181003 00:26:14.771" endtime="20181003 00:26:14.847"></status>
+</kw>
+<status status="PASS" starttime="20181003 00:26:14.770" endtime="20181003 00:26:14.847"></status>
+</kw>
+<status status="PASS" starttime="20181003 00:26:14.769" endtime="20181003 00:26:14.847"></status>
+</kw>
+<status status="PASS" starttime="20181003 00:25:54.934" endtime="20181003 00:26:14.847"></status>
+</kw>
+<status status="PASS" starttime="20181003 00:25:54.934" endtime="20181003 00:26:14.847"></status>
+</kw>
+<status status="PASS" starttime="20181003 00:25:54.934" endtime="20181003 00:26:14.852"></status>
+</kw>
+<kw name="End Web Test" library="Common" type="teardown">
+<kw name="Close All Browsers" library="Selenium2Library">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20181003 00:26:14.852" endtime="20181003 00:26:17.790"></status>
+</kw>
+<status status="PASS" starttime="20181003 00:26:14.852" endtime="20181003 00:26:17.790"></status>
+</kw>
+<status status="PASS" starttime="20181003 00:25:47.095" endtime="20181003 00:26:17.790" critical="yes"></status>
+</test>
+<doc>Demo Weather page testing using Robot-framework</doc>
+<status status="PASS" starttime="20181003 00:25:46.440" endtime="20181003 00:26:17.795"></status>
+</suite>
+<suite id="s1-s2" name="ValidCityTest" source="C:\Users\Anurag\dwhelper\weather_robot_framework_demo\tests\ValidCityTest.robot">
+<test id="s1-s2-t1" name="Should see correct error messages with invalid city name">
+<kw name="Begin Web Test" library="Common" type="setup">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to the given ``url``.</doc>
+<arguments>
+<arg>about:blank</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20181003 00:26:17.855" level="INFO">Opening browser 'chrome' to base url 'about:blank'.</msg>
+<status status="PASS" starttime="20181003 00:26:17.855" endtime="20181003 00:26:23.852"></status>
+</kw>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20181003 00:26:23.853" endtime="20181003 00:26:24.982"></status>
+</kw>
+<kw name="Delete All Cookies" library="Selenium2Library">
+<doc>Deletes all cookies.</doc>
+<status status="PASS" starttime="20181003 00:26:24.982" endtime="20181003 00:26:24.992"></status>
+</kw>
+<status status="PASS" starttime="20181003 00:26:17.850" endtime="20181003 00:26:24.992"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${HOME_BASE_URL.${ENVIRONMENT}}</arg>
+</arguments>
+<status status="PASS" starttime="20181003 00:26:24.992" endtime="20181003 00:26:24.997"></status>
+</kw>
+<kw name="Get CSV Data" library="DataManager">
+<arguments>
+<arg>${VALID_CITY_PATH_CSV}</arg>
+</arguments>
+<assign>
+<var>${InvalidLoginScenarios}</var>
+</assign>
+<kw name="Read Csv File" library="Csv">
+<arguments>
+<arg>${FilePath}</arg>
+</arguments>
+<assign>
+<var>${Data}</var>
+</assign>
+<msg timestamp="20181003 00:26:24.997" level="INFO">${Data} = [['Pune', 'IN', 'Weather in your city']]</msg>
+<status status="PASS" starttime="20181003 00:26:24.997" endtime="20181003 00:26:24.997"></status>
+</kw>
+<msg timestamp="20181003 00:26:24.997" level="INFO">${InvalidLoginScenarios} = [['Pune', 'IN', 'Weather in your city']]</msg>
+<status status="PASS" starttime="20181003 00:26:24.997" endtime="20181003 00:26:24.997"></status>
+</kw>
+<kw name="Login with Many Invalid Credentials" library="ValidCitySearch">
+<arguments>
+<arg>${InvalidLoginScenarios}</arg>
+</arguments>
+<kw name="${LocationScenario} IN [ @{ValidLocationScenarios} ]" type="for">
+<kw name="${LocationScenario} = ['Pune', 'IN', 'Weather in your city']" type="foritem">
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<arguments>
+<arg>ValidSearch.Navigate To</arg>
+</arguments>
+<kw name="Navigate To" library="ValidSearch">
+<kw name="Go To" library="Selenium2Library">
+<doc>Navigates the active browser instance to the provided ``url``.</doc>
+<arguments>
+<arg>${BASE_URL.${ENVIRONMENT}}</arg>
+</arguments>
+<msg timestamp="20181003 00:26:25.002" level="INFO">Opening url 'https://openweathermap.org/'</msg>
+<status status="PASS" starttime="20181003 00:26:25.002" endtime="20181003 00:26:30.674"></status>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="Selenium2Library">
+<doc>Waits until element ``locator`` is enabled.</doc>
+<arguments>
+<arg>xpath=//input[@placeholder='Your city name']</arg>
+</arguments>
+<status status="PASS" starttime="20181003 00:26:30.675" endtime="20181003 00:26:30.792"></status>
+</kw>
+<status status="PASS" starttime="20181003 00:26:25.002" endtime="20181003 00:26:30.792"></status>
+</kw>
+<status status="PASS" starttime="20181003 00:26:24.997" endtime="20181003 00:26:30.792"></status>
+</kw>
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<arguments>
+<arg>Attempt Search</arg>
+<arg>${LocationScenario}</arg>
+</arguments>
+<kw name="Attempt Search" library="ValidCitySearch">
+<arguments>
+<arg>${LocationScenario}</arg>
+</arguments>
+<kw name="Enter Location" library="ValidSearch">
+<arguments>
+<arg>${LocationDetails}</arg>
+</arguments>
+<kw name="Catenate" library="BuiltIn">
+<doc>Catenates the given items together and returns the resulted string.</doc>
+<arguments>
+<arg>SEPARATOR=,</arg>
+<arg>${LocationDetails[0]}</arg>
+<arg>${LocationDetails[1]}</arg>
+</arguments>
+<assign>
+<var>${Location}</var>
+</assign>
+<msg timestamp="20181003 00:26:30.797" level="INFO">${Location} = Pune,IN</msg>
+<status status="PASS" starttime="20181003 00:26:30.795" endtime="20181003 00:26:30.797"></status>
+</kw>
+<kw name="Run Keyword Unless" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is false.</doc>
+<arguments>
+<arg>'${LocationDetails[0]}' == '#BLANK'</arg>
+<arg>Input Text</arg>
+<arg>${YOUR_CITY_NAME}</arg>
+<arg>${Location}</arg>
+</arguments>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${YOUR_CITY_NAME}</arg>
+<arg>${Location}</arg>
+</arguments>
+<msg timestamp="20181003 00:26:30.799" level="INFO">Typing text 'Pune,IN' into text field 'xpath=//input[@placeholder='Your city name']'.</msg>
+<status status="PASS" starttime="20181003 00:26:30.798" endtime="20181003 00:26:31.221"></status>
+</kw>
+<status status="PASS" starttime="20181003 00:26:30.797" endtime="20181003 00:26:31.221"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>5s</arg>
+</arguments>
+<msg timestamp="20181003 00:26:36.225" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20181003 00:26:31.221" endtime="20181003 00:26:36.225"></status>
+</kw>
+<status status="PASS" starttime="20181003 00:26:30.794" endtime="20181003 00:26:36.225"></status>
+</kw>
+<kw name="Click Submit" library="ValidSearch">
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks button identified by ``locator``.</doc>
+<arguments>
+<arg>${SERACH_BUTTON}</arg>
+</arguments>
+<msg timestamp="20181003 00:26:36.225" level="INFO">Clicking button 'xpath=(//BUTTON[@type='submit'])[2]'.</msg>
+<status status="PASS" starttime="20181003 00:26:36.225" endtime="20181003 00:26:41.717"></status>
+</kw>
+<status status="PASS" starttime="20181003 00:26:36.225" endtime="20181003 00:26:41.717"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>1s</arg>
+</arguments>
+<msg timestamp="20181003 00:26:42.728" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20181003 00:26:41.718" endtime="20181003 00:26:42.728"></status>
+</kw>
+<status status="PASS" starttime="20181003 00:26:30.793" endtime="20181003 00:26:42.729"></status>
+</kw>
+<status status="PASS" starttime="20181003 00:26:30.793" endtime="20181003 00:26:42.729"></status>
+</kw>
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<arguments>
+<arg>Verify Search Page Success Message</arg>
+<arg>${LocationScenario}</arg>
+</arguments>
+<kw name="Verify Search Page Success Message" library="ValidCitySearch">
+<arguments>
+<arg>${LocationScenario}</arg>
+</arguments>
+<kw name="Verify Error Message" library="ValidSearch">
+<arguments>
+<arg>${ExpectedMessage}</arg>
+</arguments>
+<kw name="Page Should Contain" library="Selenium2Library">
+<doc>Verifies that current page contains ``text``.</doc>
+<arguments>
+<arg>${ExpectedErrorMessage[2]}</arg>
+</arguments>
+<msg timestamp="20181003 00:26:42.924" level="INFO">Current page contains text 'Weather in your city'.</msg>
+<status status="PASS" starttime="20181003 00:26:42.734" endtime="20181003 00:26:42.924"></status>
+</kw>
+<status status="PASS" starttime="20181003 00:26:42.733" endtime="20181003 00:26:42.929"></status>
+</kw>
+<status status="PASS" starttime="20181003 00:26:42.731" endtime="20181003 00:26:42.929"></status>
+</kw>
+<status status="PASS" starttime="20181003 00:26:42.730" endtime="20181003 00:26:42.929"></status>
+</kw>
+<status status="PASS" starttime="20181003 00:26:24.997" endtime="20181003 00:26:42.929"></status>
+</kw>
+<status status="PASS" starttime="20181003 00:26:24.997" endtime="20181003 00:26:42.929"></status>
+</kw>
+<status status="PASS" starttime="20181003 00:26:24.997" endtime="20181003 00:26:42.929"></status>
+</kw>
+<kw name="End Web Test" library="Common" type="teardown">
+<kw name="Close All Browsers" library="Selenium2Library">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20181003 00:26:42.934" endtime="20181003 00:26:45.762"></status>
+</kw>
+<status status="PASS" starttime="20181003 00:26:42.934" endtime="20181003 00:26:45.762"></status>
+</kw>
+<status status="PASS" starttime="20181003 00:26:17.850" endtime="20181003 00:26:45.762" critical="yes"></status>
+</test>
+<doc>Demo Weather page testing using Robot-framework</doc>
+<status status="PASS" starttime="20181003 00:26:17.805" endtime="20181003 00:26:45.770"></status>
+</suite>
+<suite id="s1-s3" name="WeatherInvalidLogin" source="C:\Users\Anurag\dwhelper\weather_robot_framework_demo\tests\WeatherInvalidLogin.robot">
+<test id="s1-s3-t1" name="Should see correct error messages with invalid logins">
+<kw name="Begin Web Test" library="Common" type="setup">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to the given ``url``.</doc>
+<arguments>
+<arg>about:blank</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20181003 00:26:45.830" level="INFO">Opening browser 'chrome' to base url 'about:blank'.</msg>
+<status status="PASS" starttime="20181003 00:26:45.830" endtime="20181003 00:26:51.504"></status>
+</kw>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20181003 00:26:51.505" endtime="20181003 00:26:52.648"></status>
+</kw>
+<kw name="Delete All Cookies" library="Selenium2Library">
+<doc>Deletes all cookies.</doc>
+<status status="PASS" starttime="20181003 00:26:52.648" endtime="20181003 00:26:52.670"></status>
+</kw>
+<status status="PASS" starttime="20181003 00:26:45.825" endtime="20181003 00:26:52.670"></status>
+</kw>
+<kw name="Get CSV Data" library="DataManager">
+<arguments>
+<arg>${INVALID_CREDENTIALS_PATH_CSV}</arg>
+</arguments>
+<assign>
+<var>${InvalidLoginScenarios}</var>
+</assign>
+<kw name="Read Csv File" library="Csv">
+<arguments>
+<arg>${FilePath}</arg>
+</arguments>
+<assign>
+<var>${Data}</var>
+</assign>
+<msg timestamp="20181003 00:26:52.675" level="INFO">${Data} = [['anusngh1986@gmail.com', 'getsetgo', 'Invalid Email or password'], ['anusngh1986@gmail.com', 'getsetgo', 'Invalid Email or password'], ['#BLANK', '#BLANK', 'Invalid Email or password']]</msg>
+<status status="PASS" starttime="20181003 00:26:52.675" endtime="20181003 00:26:52.675"></status>
+</kw>
+<msg timestamp="20181003 00:26:52.680" level="INFO">${InvalidLoginScenarios} = [['anusngh1986@gmail.com', 'getsetgo', 'Invalid Email or password'], ['anusngh1986@gmail.com', 'getsetgo', 'Invalid Email or password'], ['#BLANK', '#BLANK', 'Invalid Email or password']]</msg>
+<status status="PASS" starttime="20181003 00:26:52.675" endtime="20181003 00:26:52.680"></status>
+</kw>
+<kw name="Login with Many Invalid Credentials" library="WeatherSignIn">
+<arguments>
+<arg>${InvalidLoginScenarios}</arg>
+</arguments>
+<kw name="${LoginScenario} IN [ @{InvalidLoginScenarios} ]" type="for">
+<kw name="${LoginScenario} = ['anusngh1986@gmail.com', 'getsetgo', 'Invalid Email or password']" type="foritem">
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<arguments>
+<arg>SignIn.Navigate To</arg>
+</arguments>
+<kw name="Navigate To" library="SignIn">
+<kw name="Catenate" library="BuiltIn">
+<doc>Catenates the given items together and returns the resulted string.</doc>
+<arguments>
+<arg>SEPARATOR=/</arg>
+<arg>${HOME_BASE_URL.${ENVIRONMENT}}</arg>
+<arg>${LOGIN_URL}</arg>
+</arguments>
+<assign>
+<var>${SignInUrl}</var>
+</assign>
+<msg timestamp="20181003 00:26:52.685" level="INFO">${SignInUrl} = https://home.openweathermap.org/users/sign_in</msg>
+<status status="PASS" starttime="20181003 00:26:52.685" endtime="20181003 00:26:52.685"></status>
+</kw>
+<kw name="Go To" library="Selenium2Library">
+<doc>Navigates the active browser instance to the provided ``url``.</doc>
+<arguments>
+<arg>${SignInUrl}</arg>
+</arguments>
+<msg timestamp="20181003 00:26:52.685" level="INFO">Opening url 'https://home.openweathermap.org/users/sign_in'</msg>
+<status status="PASS" starttime="20181003 00:26:52.685" endtime="20181003 00:26:58.150"></status>
+</kw>
+<status status="PASS" starttime="20181003 00:26:52.680" endtime="20181003 00:26:58.151"></status>
+</kw>
+<status status="PASS" starttime="20181003 00:26:52.680" endtime="20181003 00:26:58.151"></status>
+</kw>
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<arguments>
+<arg>Attempt Login</arg>
+<arg>${LoginScenario}</arg>
+</arguments>
+<kw name="Attempt Login" library="WeatherSignIn">
+<arguments>
+<arg>${LoginScenario}</arg>
+</arguments>
+<kw name="Enter Credentials" library="SignIn">
+<arguments>
+<arg>${Credentials}</arg>
+</arguments>
+<kw name="Run Keyword Unless" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is false.</doc>
+<arguments>
+<arg>'${Credentials[0]}' == '#BLANK'</arg>
+<arg>Input Text</arg>
+<arg>${SIGN_IN_EMAIL}</arg>
+<arg>${Credentials[0]}</arg>
+</arguments>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${SIGN_IN_EMAIL}</arg>
+<arg>${Credentials[0]}</arg>
+</arguments>
+<msg timestamp="20181003 00:26:58.156" level="INFO">Typing text 'anusngh1986@gmail.com' into text field 'xpath=//INPUT[@id='user_email']'.</msg>
+<status status="PASS" starttime="20181003 00:26:58.155" endtime="20181003 00:26:58.951"></status>
+</kw>
+<status status="PASS" starttime="20181003 00:26:58.154" endtime="20181003 00:26:58.951"></status>
+</kw>
+<kw name="Run Keyword Unless" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is false.</doc>
+<arguments>
+<arg>'${Credentials[1]}' == '#BLANK'</arg>
+<arg>Input Text</arg>
+<arg>${SIGN_IN_PASSWORD}</arg>
+<arg>${Credentials[1]}</arg>
+</arguments>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${SIGN_IN_PASSWORD}</arg>
+<arg>${Credentials[1]}</arg>
+</arguments>
+<msg timestamp="20181003 00:26:58.953" level="INFO">Typing text 'getsetgo' into text field 'xpath=//INPUT[@id='user_password']'.</msg>
+<status status="PASS" starttime="20181003 00:26:58.953" endtime="20181003 00:26:59.384"></status>
+</kw>
+<status status="PASS" starttime="20181003 00:26:58.952" endtime="20181003 00:26:59.384"></status>
+</kw>
+<status status="PASS" starttime="20181003 00:26:58.153" endtime="20181003 00:26:59.385"></status>
+</kw>
+<kw name="Click Submit" library="SignIn">
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks button identified by ``locator``.</doc>
+<arguments>
+<arg>${LOGIN_SUBMIT_BUTTON}</arg>
+</arguments>
+<msg timestamp="20181003 00:26:59.386" level="INFO">Clicking button 'xpath=(//INPUT[@type='submit'])[1]'.</msg>
+<status status="PASS" starttime="20181003 00:26:59.386" endtime="20181003 00:27:00.297"></status>
+</kw>
+<status status="PASS" starttime="20181003 00:26:59.385" endtime="20181003 00:27:00.298"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>1s</arg>
+</arguments>
+<msg timestamp="20181003 00:27:01.298" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20181003 00:27:00.298" endtime="20181003 00:27:01.298"></status>
+</kw>
+<status status="PASS" starttime="20181003 00:26:58.152" endtime="20181003 00:27:01.299"></status>
+</kw>
+<status status="PASS" starttime="20181003 00:26:58.151" endtime="20181003 00:27:01.299"></status>
+</kw>
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<arguments>
+<arg>Verify Login Page Error Message</arg>
+<arg>${LoginScenario}</arg>
+</arguments>
+<kw name="Verify Login Page Error Message" library="WeatherSignIn">
+<arguments>
+<arg>${LoginScenario}</arg>
+</arguments>
+<kw name="Verify Error Message" library="SignIn">
+<arguments>
+<arg>${ExpectedErrorMessage}</arg>
+</arguments>
+<kw name="Page Should Contain" library="Selenium2Library">
+<doc>Verifies that current page contains ``text``.</doc>
+<arguments>
+<arg>${ExpectedErrorMessage[2]}</arg>
+</arguments>
+<msg timestamp="20181003 00:27:01.392" level="INFO">Current page contains text 'Invalid Email or password'.</msg>
+<status status="PASS" starttime="20181003 00:27:01.304" endtime="20181003 00:27:01.393"></status>
+</kw>
+<status status="PASS" starttime="20181003 00:27:01.303" endtime="20181003 00:27:01.393"></status>
+</kw>
+<status status="PASS" starttime="20181003 00:27:01.301" endtime="20181003 00:27:01.394"></status>
+</kw>
+<status status="PASS" starttime="20181003 00:27:01.300" endtime="20181003 00:27:01.394"></status>
+</kw>
+<status status="PASS" starttime="20181003 00:26:52.680" endtime="20181003 00:27:01.394"></status>
+</kw>
+<kw name="${LoginScenario} = ['anusngh1986@gmail.com', 'getsetgo', 'Invalid Email or password']" type="foritem">
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<arguments>
+<arg>SignIn.Navigate To</arg>
+</arguments>
+<kw name="Navigate To" library="SignIn">
+<kw name="Catenate" library="BuiltIn">
+<doc>Catenates the given items together and returns the resulted string.</doc>
+<arguments>
+<arg>SEPARATOR=/</arg>
+<arg>${HOME_BASE_URL.${ENVIRONMENT}}</arg>
+<arg>${LOGIN_URL}</arg>
+</arguments>
+<assign>
+<var>${SignInUrl}</var>
+</assign>
+<msg timestamp="20181003 00:27:01.400" level="INFO">${SignInUrl} = https://home.openweathermap.org/users/sign_in</msg>
+<status status="PASS" starttime="20181003 00:27:01.397" endtime="20181003 00:27:01.400"></status>
+</kw>
+<kw name="Go To" library="Selenium2Library">
+<doc>Navigates the active browser instance to the provided ``url``.</doc>
+<arguments>
+<arg>${SignInUrl}</arg>
+</arguments>
+<msg timestamp="20181003 00:27:01.401" level="INFO">Opening url 'https://home.openweathermap.org/users/sign_in'</msg>
+<status status="PASS" starttime="20181003 00:27:01.400" endtime="20181003 00:27:02.909"></status>
+</kw>
+<status status="PASS" starttime="20181003 00:27:01.396" endtime="20181003 00:27:02.909"></status>
+</kw>
+<status status="PASS" starttime="20181003 00:27:01.395" endtime="20181003 00:27:02.909"></status>
+</kw>
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<arguments>
+<arg>Attempt Login</arg>
+<arg>${LoginScenario}</arg>
+</arguments>
+<kw name="Attempt Login" library="WeatherSignIn">
+<arguments>
+<arg>${LoginScenario}</arg>
+</arguments>
+<kw name="Enter Credentials" library="SignIn">
+<arguments>
+<arg>${Credentials}</arg>
+</arguments>
+<kw name="Run Keyword Unless" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is false.</doc>
+<arguments>
+<arg>'${Credentials[0]}' == '#BLANK'</arg>
+<arg>Input Text</arg>
+<arg>${SIGN_IN_EMAIL}</arg>
+<arg>${Credentials[0]}</arg>
+</arguments>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${SIGN_IN_EMAIL}</arg>
+<arg>${Credentials[0]}</arg>
+</arguments>
+<msg timestamp="20181003 00:27:02.917" level="INFO">Typing text 'anusngh1986@gmail.com' into text field 'xpath=//INPUT[@id='user_email']'.</msg>
+<status status="PASS" starttime="20181003 00:27:02.915" endtime="20181003 00:27:03.731"></status>
+</kw>
+<status status="PASS" starttime="20181003 00:27:02.913" endtime="20181003 00:27:03.731"></status>
+</kw>
+<kw name="Run Keyword Unless" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is false.</doc>
+<arguments>
+<arg>'${Credentials[1]}' == '#BLANK'</arg>
+<arg>Input Text</arg>
+<arg>${SIGN_IN_PASSWORD}</arg>
+<arg>${Credentials[1]}</arg>
+</arguments>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${SIGN_IN_PASSWORD}</arg>
+<arg>${Credentials[1]}</arg>
+</arguments>
+<msg timestamp="20181003 00:27:03.734" level="INFO">Typing text 'getsetgo' into text field 'xpath=//INPUT[@id='user_password']'.</msg>
+<status status="PASS" starttime="20181003 00:27:03.733" endtime="20181003 00:27:04.260"></status>
+</kw>
+<status status="PASS" starttime="20181003 00:27:03.731" endtime="20181003 00:27:04.260"></status>
+</kw>
+<status status="PASS" starttime="20181003 00:27:02.912" endtime="20181003 00:27:04.261"></status>
+</kw>
+<kw name="Click Submit" library="SignIn">
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks button identified by ``locator``.</doc>
+<arguments>
+<arg>${LOGIN_SUBMIT_BUTTON}</arg>
+</arguments>
+<msg timestamp="20181003 00:27:04.262" level="INFO">Clicking button 'xpath=(//INPUT[@type='submit'])[1]'.</msg>
+<status status="PASS" starttime="20181003 00:27:04.262" endtime="20181003 00:27:05.489"></status>
+</kw>
+<status status="PASS" starttime="20181003 00:27:04.261" endtime="20181003 00:27:05.489"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>1s</arg>
+</arguments>
+<msg timestamp="20181003 00:27:06.490" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20181003 00:27:05.490" endtime="20181003 00:27:06.490"></status>
+</kw>
+<status status="PASS" starttime="20181003 00:27:02.911" endtime="20181003 00:27:06.491"></status>
+</kw>
+<status status="PASS" starttime="20181003 00:27:02.910" endtime="20181003 00:27:06.491"></status>
+</kw>
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<arguments>
+<arg>Verify Login Page Error Message</arg>
+<arg>${LoginScenario}</arg>
+</arguments>
+<kw name="Verify Login Page Error Message" library="WeatherSignIn">
+<arguments>
+<arg>${LoginScenario}</arg>
+</arguments>
+<kw name="Verify Error Message" library="SignIn">
+<arguments>
+<arg>${ExpectedErrorMessage}</arg>
+</arguments>
+<kw name="Page Should Contain" library="Selenium2Library">
+<doc>Verifies that current page contains ``text``.</doc>
+<arguments>
+<arg>${ExpectedErrorMessage[2]}</arg>
+</arguments>
+<msg timestamp="20181003 00:27:06.549" level="INFO">Current page contains text 'Invalid Email or password'.</msg>
+<status status="PASS" starttime="20181003 00:27:06.496" endtime="20181003 00:27:06.550"></status>
+</kw>
+<status status="PASS" starttime="20181003 00:27:06.494" endtime="20181003 00:27:06.550"></status>
+</kw>
+<status status="PASS" starttime="20181003 00:27:06.493" endtime="20181003 00:27:06.551"></status>
+</kw>
+<status status="PASS" starttime="20181003 00:27:06.492" endtime="20181003 00:27:06.551"></status>
+</kw>
+<status status="PASS" starttime="20181003 00:27:01.395" endtime="20181003 00:27:06.551"></status>
+</kw>
+<kw name="${LoginScenario} = ['#BLANK', '#BLANK', 'Invalid Email or password']" type="foritem">
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<arguments>
+<arg>SignIn.Navigate To</arg>
+</arguments>
+<kw name="Navigate To" library="SignIn">
+<kw name="Catenate" library="BuiltIn">
+<doc>Catenates the given items together and returns the resulted string.</doc>
+<arguments>
+<arg>SEPARATOR=/</arg>
+<arg>${HOME_BASE_URL.${ENVIRONMENT}}</arg>
+<arg>${LOGIN_URL}</arg>
+</arguments>
+<assign>
+<var>${SignInUrl}</var>
+</assign>
+<msg timestamp="20181003 00:27:06.556" level="INFO">${SignInUrl} = https://home.openweathermap.org/users/sign_in</msg>
+<status status="PASS" starttime="20181003 00:27:06.554" endtime="20181003 00:27:06.556"></status>
+</kw>
+<kw name="Go To" library="Selenium2Library">
+<doc>Navigates the active browser instance to the provided ``url``.</doc>
+<arguments>
+<arg>${SignInUrl}</arg>
+</arguments>
+<msg timestamp="20181003 00:27:06.557" level="INFO">Opening url 'https://home.openweathermap.org/users/sign_in'</msg>
+<status status="PASS" starttime="20181003 00:27:06.557" endtime="20181003 00:27:08.038"></status>
+</kw>
+<status status="PASS" starttime="20181003 00:27:06.553" endtime="20181003 00:27:08.038"></status>
+</kw>
+<status status="PASS" starttime="20181003 00:27:06.552" endtime="20181003 00:27:08.039"></status>
+</kw>
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<arguments>
+<arg>Attempt Login</arg>
+<arg>${LoginScenario}</arg>
+</arguments>
+<kw name="Attempt Login" library="WeatherSignIn">
+<arguments>
+<arg>${LoginScenario}</arg>
+</arguments>
+<kw name="Enter Credentials" library="SignIn">
+<arguments>
+<arg>${Credentials}</arg>
+</arguments>
+<kw name="Run Keyword Unless" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is false.</doc>
+<arguments>
+<arg>'${Credentials[0]}' == '#BLANK'</arg>
+<arg>Input Text</arg>
+<arg>${SIGN_IN_EMAIL}</arg>
+<arg>${Credentials[0]}</arg>
+</arguments>
+<status status="PASS" starttime="20181003 00:27:08.042" endtime="20181003 00:27:08.043"></status>
+</kw>
+<kw name="Run Keyword Unless" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is false.</doc>
+<arguments>
+<arg>'${Credentials[1]}' == '#BLANK'</arg>
+<arg>Input Text</arg>
+<arg>${SIGN_IN_PASSWORD}</arg>
+<arg>${Credentials[1]}</arg>
+</arguments>
+<status status="PASS" starttime="20181003 00:27:08.044" endtime="20181003 00:27:08.045"></status>
+</kw>
+<status status="PASS" starttime="20181003 00:27:08.041" endtime="20181003 00:27:08.045"></status>
+</kw>
+<kw name="Click Submit" library="SignIn">
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks button identified by ``locator``.</doc>
+<arguments>
+<arg>${LOGIN_SUBMIT_BUTTON}</arg>
+</arguments>
+<msg timestamp="20181003 00:27:08.047" level="INFO">Clicking button 'xpath=(//INPUT[@type='submit'])[1]'.</msg>
+<status status="PASS" starttime="20181003 00:27:08.046" endtime="20181003 00:27:09.617"></status>
+</kw>
+<status status="PASS" starttime="20181003 00:27:08.046" endtime="20181003 00:27:09.618"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>1s</arg>
+</arguments>
+<msg timestamp="20181003 00:27:10.618" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20181003 00:27:09.618" endtime="20181003 00:27:10.618"></status>
+</kw>
+<status status="PASS" starttime="20181003 00:27:08.040" endtime="20181003 00:27:10.619"></status>
+</kw>
+<status status="PASS" starttime="20181003 00:27:08.039" endtime="20181003 00:27:10.619"></status>
+</kw>
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<arguments>
+<arg>Verify Login Page Error Message</arg>
+<arg>${LoginScenario}</arg>
+</arguments>
+<kw name="Verify Login Page Error Message" library="WeatherSignIn">
+<arguments>
+<arg>${LoginScenario}</arg>
+</arguments>
+<kw name="Verify Error Message" library="SignIn">
+<arguments>
+<arg>${ExpectedErrorMessage}</arg>
+</arguments>
+<kw name="Page Should Contain" library="Selenium2Library">
+<doc>Verifies that current page contains ``text``.</doc>
+<arguments>
+<arg>${ExpectedErrorMessage[2]}</arg>
+</arguments>
+<msg timestamp="20181003 00:27:10.672" level="INFO">Current page contains text 'Invalid Email or password'.</msg>
+<status status="PASS" starttime="20181003 00:27:10.624" endtime="20181003 00:27:10.672"></status>
+</kw>
+<status status="PASS" starttime="20181003 00:27:10.622" endtime="20181003 00:27:10.673"></status>
+</kw>
+<status status="PASS" starttime="20181003 00:27:10.621" endtime="20181003 00:27:10.673"></status>
+</kw>
+<status status="PASS" starttime="20181003 00:27:10.620" endtime="20181003 00:27:10.673"></status>
+</kw>
+<status status="PASS" starttime="20181003 00:27:06.552" endtime="20181003 00:27:10.674"></status>
+</kw>
+<status status="PASS" starttime="20181003 00:26:52.680" endtime="20181003 00:27:10.674"></status>
+</kw>
+<status status="PASS" starttime="20181003 00:26:52.680" endtime="20181003 00:27:10.674"></status>
+</kw>
+<kw name="End Web Test" library="Common" type="teardown">
+<kw name="Close All Browsers" library="Selenium2Library">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20181003 00:27:10.677" endtime="20181003 00:27:14.748"></status>
+</kw>
+<status status="PASS" starttime="20181003 00:27:10.676" endtime="20181003 00:27:14.748"></status>
+</kw>
+<status status="PASS" starttime="20181003 00:26:45.825" endtime="20181003 00:27:14.748" critical="yes"></status>
+</test>
+<doc>Demo Weather page testing using Robot-framework</doc>
+<status status="PASS" starttime="20181003 00:26:45.781" endtime="20181003 00:27:14.758"></status>
+</suite>
+<status status="PASS" starttime="20181003 00:25:46.335" endtime="20181003 00:27:14.773"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="3" fail="0">Critical Tests</stat>
+<stat pass="3" fail="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="3" fail="0" id="s1" name="InvalidCityTest &amp; ValidCityTest &amp; WeatherInvalidLogin">InvalidCityTest &amp; ValidCityTest &amp; WeatherInvalidLogin</stat>
+<stat pass="1" fail="0" id="s1-s1" name="InvalidCityTest">InvalidCityTest &amp; ValidCityTest &amp; WeatherInvalidLogin.InvalidCityTest</stat>
+<stat pass="1" fail="0" id="s1-s2" name="ValidCityTest">InvalidCityTest &amp; ValidCityTest &amp; WeatherInvalidLogin.ValidCityTest</stat>
+<stat pass="1" fail="0" id="s1-s3" name="WeatherInvalidLogin">InvalidCityTest &amp; ValidCityTest &amp; WeatherInvalidLogin.WeatherInvalidLogin</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
