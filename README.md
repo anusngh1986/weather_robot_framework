@@ -1,9 +1,10 @@
-# Weather_robot_framework
 
-This is a ATDD framework build for Testing https://openweathermap.org website.
+# Weather_robot_framework :
+
+This is a ATDD framework build for doing UI test of website https://openweathermap.org.
 
 
-# Pre-requiste for running the framework
+# Pre-requiste for running the framework :
  1.Python 3.7 should be installed in your system.
  
  2.Robot-framework should be installed in your system.
