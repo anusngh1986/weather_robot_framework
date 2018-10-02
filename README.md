@@ -12,6 +12,7 @@ This is a ATDD framework build for Testing https://openweathermap.org website.
  
  
  # Running of tests :
- All 3 test present in Tests directory can be executing below commad for weather_robot_framework directory.
- robot -d results tests/*
+ All 3 test present in Tests directory can be executed using below commad for weather_robot_framework directory.
+ 
+  robot -d results tests/*
 
