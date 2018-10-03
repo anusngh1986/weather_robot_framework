@@ -43,13 +43,11 @@ Get All Links
     @{LinkItems}    Create List
     Comment    Loop through all links and store links value that has length more than 1 character
     : FOR    ${INDEX}    IN RANGE    1    ${AllLinksCount}
-    \    Log to console   ${INDEX}
     \    ${lintext}=    Get Text    xpath=(//a)[${INDEX}]
-    \    Log to console   ${lintext}
     \    ${linklength}    Get Length    ${lintext}
     \    Run Keyword If    ${linklength}>1    Append To List    ${LinkItems}    ${lintext}
     ${LinkSize}=    Get Length    ${LinkItems}
     Log    ${LinkSize}
-    Comment    Print all links
-    : FOR    ${ELEMENT}    IN    @{LinkItems}
-    \    Log to console   ${ELEMENT}
+    Comment    Log and return Link items list
+    log to console    ${LinkItems}
+    [Return]  ${LinkItems}
