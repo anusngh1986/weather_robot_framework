@@ -33,8 +33,6 @@ Log All the Links on the page to console
     @{elements}=    Get WebElements    xpath=//a[@href]
 
 
-
-
 Get All Links
     [Tags]    Links
     Comment    Count Number Of Linkds on the Page
