@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3ad725e4-246f-461b-8bab-51a413035e54" name="Default" comment="" />
+    <list default="true" id="3ad725e4-246f-461b-8bab-51a413035e54" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <ignored path="amazon.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -36,8 +38,8 @@
       <file leaf-file-name="InvalidCityTest.robot" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Tests/InvalidCityTest.robot">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="18" column="53" selection-start-line="18" selection-start-column="53" selection-end-line="18" selection-end-column="53" />
+            <state relative-caret-position="289">
+              <caret line="17" column="49" selection-start-line="17" selection-start-column="49" selection-end-line="17" selection-end-column="49" />
               <folding>
                 <element signature="e#0#333#0" expanded="true" />
               </folding>
@@ -48,7 +50,7 @@
       <file leaf-file-name="InvalidCitySearch.robot" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Resources/InvalidCitySearch.robot">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
+            <state relative-caret-position="51">
               <caret line="5" selection-start-line="5" selection-end-line="5" selection-end-column="31" />
               <folding>
                 <element signature="e#0#132#0" expanded="true" />
@@ -60,11 +62,8 @@
       <file leaf-file-name="ValidCityTest.robot" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Tests/ValidCityTest.robot">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
+            <state relative-caret-position="170">
               <caret line="18" column="48" selection-start-line="18" selection-start-column="48" selection-end-line="18" selection-end-column="48" />
-              <folding>
-                <element signature="e#0#306#0" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -72,8 +71,8 @@
       <file leaf-file-name="PageLink Validation.robot" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Tests/PageLink Validation.robot">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+            <state relative-caret-position="51">
+              <caret line="11" selection-start-line="11" selection-end-line="11" />
               <folding>
                 <element signature="e#0#309#0" expanded="true" />
               </folding>
@@ -84,7 +83,7 @@
       <file leaf-file-name="HrefValidation.robot" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Resources/PO/HrefValidation.robot">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
+            <state relative-caret-position="561">
               <caret line="35" selection-start-line="35" selection-end-line="35" />
             </state>
           </provider>
@@ -94,7 +93,7 @@
         <entry file="file://$PROJECT_DIR$/Resources/PageLinkValidation.robot">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="289">
-              <caret line="18" column="13" lean-forward="true" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
+              <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -103,7 +102,7 @@
         <entry file="file://$PROJECT_DIR$/Resources/PO/InValidSearch.robot">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="340">
-              <caret line="21" column="20" lean-forward="true" selection-start-line="21" selection-start-column="20" selection-end-line="21" selection-end-column="20" />
+              <caret line="21" column="20" selection-start-line="21" selection-start-column="20" selection-end-line="21" selection-end-column="20" />
               <folding>
                 <element signature="e#0#42#0" expanded="true" />
               </folding>
@@ -114,7 +113,7 @@
       <file leaf-file-name="ValidCitySearch.robot" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Resources/ValidCitySearch.robot">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
+            <state relative-caret-position="51">
               <caret line="5" selection-start-line="5" selection-end-line="5" selection-end-column="28" />
               <folding>
                 <element signature="e#0#130#0" expanded="true" />
@@ -226,7 +225,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="vcs.Git" />
+    <property name="settings.editor.selected.configurable" value="settings.github" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -288,19 +287,17 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49384886" visible="true" weight="0.22139117" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49384886" visible="true" weight="0.22139117" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32723948" />
-      <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Python Console" order="7" weight="0.32906765" />
+      <window_info anchor="bottom" id="Run" order="2" />
       <window_info id="Structure" order="1" sideWeight="0.49384886" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" x="0" y="0" width="1366" height="728" id="Terminal" order="7" type="WINDOWED" visible="true" weight="0.57586837" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" x="0" y="0" width="1366" height="728" id="Terminal" order="7" type="WINDOWED" weight="0.57586837" />
       <window_info id="Favorites" order="2" sideWeight="0.50615114" side_tool="true" weight="0.5490354" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -308,6 +305,7 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32723948" />
     </layout>
   </component>
   <component name="UnknownFeatures">
@@ -415,9 +413,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Results/selenium-screenshot-1.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/Results/selenium-screenshot-1.png" />
     <entry file="file://$PROJECT_DIR$/Data/Users.csv">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
@@ -450,9 +446,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
           <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
-          <folding>
-            <element signature="e#0#42#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -460,9 +453,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="425">
           <caret line="26" column="41" lean-forward="true" selection-start-line="26" selection-start-column="41" selection-end-line="26" selection-end-column="41" />
-          <folding>
-            <element signature="e#0#42#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -497,9 +487,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
           <caret line="19" column="13" lean-forward="true" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
-          <folding>
-            <element signature="e#0#57#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -508,7 +495,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Resources/PO/HrefValidation.robot">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
+        <state relative-caret-position="561">
           <caret line="35" selection-start-line="35" selection-end-line="35" />
         </state>
       </provider>
@@ -516,7 +503,7 @@
     <entry file="file://$PROJECT_DIR$/Resources/PO/InValidSearch.robot">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
-          <caret line="21" column="20" lean-forward="true" selection-start-line="21" selection-start-column="20" selection-end-line="21" selection-end-column="20" />
+          <caret line="21" column="20" selection-start-line="21" selection-start-column="20" selection-end-line="21" selection-end-column="20" />
           <folding>
             <element signature="e#0#42#0" expanded="true" />
           </folding>
@@ -525,8 +512,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Tests/PageLink Validation.robot">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+        <state relative-caret-position="51">
+          <caret line="11" selection-start-line="11" selection-end-line="11" />
           <folding>
             <element signature="e#0#309#0" expanded="true" />
           </folding>
@@ -543,13 +530,13 @@
     <entry file="file://$PROJECT_DIR$/Resources/PageLinkValidation.robot">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
-          <caret line="18" column="13" lean-forward="true" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
+          <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Resources/ValidCitySearch.robot">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
+        <state relative-caret-position="51">
           <caret line="5" selection-start-line="5" selection-end-line="5" selection-end-column="28" />
           <folding>
             <element signature="e#0#130#0" expanded="true" />
@@ -559,17 +546,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Tests/ValidCityTest.robot">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
+        <state relative-caret-position="170">
           <caret line="18" column="48" selection-start-line="18" selection-start-column="48" selection-end-line="18" selection-end-column="48" />
-          <folding>
-            <element signature="e#0#306#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Resources/InvalidCitySearch.robot">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
+        <state relative-caret-position="51">
           <caret line="5" selection-start-line="5" selection-end-line="5" selection-end-column="31" />
           <folding>
             <element signature="e#0#132#0" expanded="true" />
@@ -579,8 +563,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Tests/InvalidCityTest.robot">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="53" selection-start-line="18" selection-start-column="53" selection-end-line="18" selection-end-column="53" />
+        <state relative-caret-position="289">
+          <caret line="17" column="49" selection-start-line="17" selection-start-column="49" selection-end-line="17" selection-end-column="49" />
           <folding>
             <element signature="e#0#333#0" expanded="true" />
           </folding>
