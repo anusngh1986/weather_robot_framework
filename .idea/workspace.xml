@@ -28,30 +28,18 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="log.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="log.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Results/log.html">
           <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
-      <file leaf-file-name="Common.robot" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Resources/Common.robot">
+      <file leaf-file-name="InvalidCityTest.robot" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Tests/InvalidCityTest.robot">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
+            <state relative-caret-position="306">
+              <caret line="18" column="53" selection-start-line="18" selection-start-column="53" selection-end-line="18" selection-end-column="53" />
               <folding>
-                <element signature="e#0#42#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DataManager.robot" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Resources/DataManager.robot">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="8" column="18" selection-start-line="8" selection-start-column="18" selection-end-line="8" selection-end-column="18" />
-              <folding>
-                <element signature="e#0#108#0" expanded="true" />
+                <element signature="e#0#333#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -60,40 +48,64 @@
       <file leaf-file-name="InvalidCitySearch.robot" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Resources/InvalidCitySearch.robot">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="1" column="67" selection-start-line="1" selection-start-column="67" selection-end-line="1" selection-end-column="67" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="WeatherSignIn.robot" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Resources/WeatherSignIn.robot">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="19" column="13" lean-forward="true" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
+            <state relative-caret-position="85">
+              <caret line="5" selection-start-line="5" selection-end-line="5" selection-end-column="31" />
               <folding>
-                <element signature="e#0#57#0" expanded="true" />
+                <element signature="e#0#132#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="InputData.robot" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Data/InputData.robot">
+      <file leaf-file-name="ValidCityTest.robot" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Tests/ValidCityTest.robot">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="8" column="44" selection-start-line="8" selection-start-column="44" selection-end-line="8" selection-end-column="44" />
+            <state relative-caret-position="306">
+              <caret line="18" column="48" selection-start-line="18" selection-start-column="48" selection-end-line="18" selection-end-column="48" />
+              <folding>
+                <element signature="e#0#306#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="InvalidCityTest.robot" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Tests/InvalidCityTest.robot">
+      <file leaf-file-name="PageLink Validation.robot" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Tests/PageLink Validation.robot">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
+            <state relative-caret-position="187">
+              <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
               <folding>
-                <element signature="e#0#405#0" expanded="true" />
+                <element signature="e#0#309#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="HrefValidation.robot" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Resources/PO/HrefValidation.robot">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="340">
+              <caret line="35" selection-start-line="35" selection-end-line="35" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PageLinkValidation.robot" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Resources/PageLinkValidation.robot">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="289">
+              <caret line="18" column="13" lean-forward="true" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="InValidSearch.robot" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Resources/PO/InValidSearch.robot">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="340">
+              <caret line="21" column="20" lean-forward="true" selection-start-line="21" selection-start-column="20" selection-end-line="21" selection-end-column="20" />
+              <folding>
+                <element signature="e#0#42#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -102,19 +114,10 @@
       <file leaf-file-name="ValidCitySearch.robot" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Resources/ValidCitySearch.robot">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="1" selection-start-line="1" selection-end-line="1" selection-end-column="67" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ValidCityTest.robot" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Tests/ValidCityTest.robot">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="15" column="18" selection-start-line="15" selection-start-column="18" selection-end-line="15" selection-end-column="18" />
+            <state relative-caret-position="85">
+              <caret line="5" selection-start-line="5" selection-end-line="5" selection-end-column="28" />
               <folding>
-                <element signature="e#0#306#0" expanded="true" />
+                <element signature="e#0#130#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -133,6 +136,9 @@
     <dirStrings>
       <dir>C:\Users\Anurag\dwhelper\weather_robot_framework_demo</dir>
     </dirStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -167,20 +173,22 @@
         <option value="$PROJECT_DIR$/Resources/Common.robot" />
         <option value="$PROJECT_DIR$/Data/InputData.robot" />
         <option value="$PROJECT_DIR$/Tests/WeatherInvalidLogin.robot" />
-        <option value="$PROJECT_DIR$/Resources/ValidCitySearch.robot" />
-        <option value="$PROJECT_DIR$/Resources/InvalidCitySearch.robot" />
         <option value="$PROJECT_DIR$/Resources/WeatherSignIn.robot" />
+        <option value="$PROJECT_DIR$/Resources/PO/HrefValidation.robot" />
+        <option value="$PROJECT_DIR$/Resources/InvalidCitySearch.robot" />
+        <option value="$PROJECT_DIR$/Resources/ValidCitySearch.robot" />
         <option value="$PROJECT_DIR$/Tests/ValidCityTest.robot" />
         <option value="$PROJECT_DIR$/Tests/InvalidCityTest.robot" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="408" />
     <option name="y" value="120" />
     <option name="width" value="1301" />
     <option name="height" value="771" />
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
@@ -197,7 +205,13 @@
             <path>
               <item name="weather_robot_framework_demo" type="b2602c69:ProjectViewProjectNode" />
               <item name="weather_robot_framework_demo" type="462c0819:PsiDirectoryNode" />
-              <item name="Results" type="462c0819:PsiDirectoryNode" />
+              <item name="Resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="weather_robot_framework_demo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="weather_robot_framework_demo" type="462c0819:PsiDirectoryNode" />
+              <item name="Resources" type="462c0819:PsiDirectoryNode" />
+              <item name="PO" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="weather_robot_framework_demo" type="b2602c69:ProjectViewProjectNode" />
@@ -212,17 +226,17 @@
   </component>
   <component name="PropertiesComponent">
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="settings.editor.selected.configurable" value="vcs.Git" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Anurag\dwhelper\weather_robot_framework_demo\Resources" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\Anurag\dwhelper\weather_robot_framework_demo\Data" />
-      <recent name="C:\Users\Anurag\dwhelper\weather_robot_framework_demo\Tests" />
       <recent name="C:\Users\Anurag\dwhelper\weather_robot_framework_demo\Resources" />
       <recent name="C:\Users\Anurag\dwhelper\weather_robot_framework_demo\Resources\PO" />
+      <recent name="C:\Users\Anurag\dwhelper\weather_robot_framework_demo\Data" />
+      <recent name="C:\Users\Anurag\dwhelper\weather_robot_framework_demo\Tests" />
       <recent name="C:\development\robot-scripts\data-driven-external\Data" />
     </key>
   </component>
@@ -273,17 +287,18 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49384886" visible="true" weight="0.22139117" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49384886" visible="true" weight="0.22139117" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32723948" />
       <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Python Console" order="7" weight="0.32906765" />
       <window_info id="Structure" order="1" sideWeight="0.49384886" side_tool="true" weight="0.25" />
-      <window_info active="true" anchor="bottom" x="0" y="0" width="1366" height="728" id="Terminal" order="7" type="WINDOWED" visible="true" weight="0.57586837" />
+      <window_info anchor="bottom" x="0" y="0" width="1366" height="728" id="Terminal" order="7" type="WINDOWED" visible="true" weight="0.57586837" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info id="Favorites" order="2" sideWeight="0.50615114" side_tool="true" weight="0.5490354" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -321,23 +336,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Tests/WeatherInvalidLogin.robot">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Tests/WeatherInvalidLogin.robot">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="275">
-          <caret line="17" column="17" selection-start-line="17" selection-start-column="17" selection-end-line="17" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Resources/Common.robot">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="50">
-          <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Resources/WeatherSignIn.robot">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="350">
@@ -448,16 +446,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Resources/PO/InValidSearch.robot">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="13" column="35" lean-forward="true" selection-start-line="13" selection-start-column="35" selection-end-line="13" selection-end-column="35" />
-          <folding>
-            <element signature="e#0#42#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Resources/PO/SignIn.robot">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
@@ -505,20 +493,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Resources/ValidCitySearch.robot">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" selection-start-line="1" selection-end-line="1" selection-end-column="67" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Resources/InvalidCitySearch.robot">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="67" selection-start-line="1" selection-start-column="67" selection-end-line="1" selection-end-column="67" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Resources/WeatherSignIn.robot">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
@@ -529,22 +503,32 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Tests/ValidCityTest.robot">
+    <entry file="file://$PROJECT_DIR$/Results/log.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Resources/PO/HrefValidation.robot">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="18" selection-start-line="15" selection-start-column="18" selection-end-line="15" selection-end-column="18" />
+        <state relative-caret-position="340">
+          <caret line="35" selection-start-line="35" selection-end-line="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Resources/PO/InValidSearch.robot">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="21" column="20" lean-forward="true" selection-start-line="21" selection-start-column="20" selection-end-line="21" selection-end-column="20" />
           <folding>
-            <element signature="e#0#306#0" expanded="true" />
+            <element signature="e#0#42#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Tests/InvalidCityTest.robot">
+    <entry file="file://$PROJECT_DIR$/Tests/PageLink Validation.robot">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
+        <state relative-caret-position="187">
+          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
           <folding>
-            <element signature="e#0#405#0" expanded="true" />
+            <element signature="e#0#309#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -556,8 +540,52 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Results/log.html">
-      <provider selected="true" editor-type-id="text-editor" />
+    <entry file="file://$PROJECT_DIR$/Resources/PageLinkValidation.robot">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="18" column="13" lean-forward="true" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Resources/ValidCitySearch.robot">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" selection-start-line="5" selection-end-line="5" selection-end-column="28" />
+          <folding>
+            <element signature="e#0#130#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Tests/ValidCityTest.robot">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" column="48" selection-start-line="18" selection-start-column="48" selection-end-line="18" selection-end-column="48" />
+          <folding>
+            <element signature="e#0#306#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Resources/InvalidCitySearch.robot">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" selection-start-line="5" selection-end-line="5" selection-end-column="31" />
+          <folding>
+            <element signature="e#0#132#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Tests/InvalidCityTest.robot">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" column="53" selection-start-line="18" selection-start-column="53" selection-end-line="18" selection-end-column="53" />
+          <folding>
+            <element signature="e#0#333#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
     </entry>
   </component>
 </project>

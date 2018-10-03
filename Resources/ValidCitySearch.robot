@@ -3,7 +3,7 @@ Documentation   Creating high-level keywords for low level keywords
 Resource    ../Resources/PO/ValidSearch.robot
 
 *** Keywords ***
-Login with Many Invalid Credentials
+Login with Many Valid Values
     [Arguments]  ${ValidLocationScenarios}
     :FOR  ${LocationScenario}  IN  @{ValidLocationScenarios}
     \  run keyword and continue on failure   ValidSearch.Navigate To

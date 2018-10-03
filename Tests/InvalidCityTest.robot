@@ -16,4 +16,4 @@ Test Teardown  Common.End Web Test
 Should see correct error messages with invalid city name
     log to console   ${HOME_BASE_URL.${ENVIRONMENT}}
     ${InvalidLoginScenarios} =  DataManager.Get CSV Data  ${INVALID_CITY_PATH_CSV}
-    InvalidCitySearch.Login with Many Invalid Credentials  ${InvalidLoginScenarios}
+    InvalidCitySearch.Search with Many Invalid Values  ${InvalidLoginScenarios}
